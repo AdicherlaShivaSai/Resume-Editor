@@ -11,6 +11,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.get("/")
+def root():
+    return {"message": "Resume Editor Backend is running!"}
 
 @app.post("/ai-enhance")
 async def ai_enhance(data: dict):

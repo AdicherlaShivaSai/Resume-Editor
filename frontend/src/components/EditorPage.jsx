@@ -10,13 +10,13 @@ function EditorPage({ resume, setResume }) {
       section: sectionKey,
       content: typeof content === 'string' ? content : JSON.stringify(content)
     };
-    const res = await axios.post('http://localhost:8000/ai-enhance', payload);
+    const res = await axios.post('https://resume-editor-8m1s.onrender.com/ai-enhance', payload);
     const enhanced = res.data.enhanced;
     setData(prev => ({ ...prev, [sectionKey]: enhanced }));
   };
 
   const handleSave = async () => {
-    await axios.post('http://localhost:8000/save-resume', data);
+    await axios.post('https://resume-editor-8m1s.onrender.com/save-resume', data);
     alert("Resume saved!");
   };
 
