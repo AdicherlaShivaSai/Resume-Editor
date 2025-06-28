@@ -1,7 +1,29 @@
-cleanenv/
-venv/
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.log
+*.sqlite3
+
+# Virtual Environments
+venv/
+cleanenv/
+
+# Node
+node_modules/
+dist/
+npm-debug.log
+package-lock.json
+
+# Vite and Build Artifacts
+*.local
+.vite/
+
+# Environment files
 .env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
